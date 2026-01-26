@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<!-- 言語設定: 日本語 -->
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- レスポンシブ対応のためのビューポート設定 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日靜 - NISSEI | 北海道広尾町音調津の一棟貸しゲストハウス</title>
+    <meta name="description" content="北海道広尾町音調津にある一棟貸しゲストハウス「日靜」。襟裳十勝日高山脈の絶景、サウナ、BBQなど心地よい滞在をお楽しみください。">
+
+    <!-- Google Fontsの読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Zen Old Mincho (明朝体) と Zen Kaku Gothic New (ゴシック体) を使用 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- スタイルシートの読み込み (リセットCSSとスタイルCSS) -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- JavaScriptの読み込み (defer属性でHTML読み込み後に実行) -->
+    <script src="./main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ヘッダーエリア -->
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__logo">
+                <a href="#">
+                    <span class="header__logo-sub">一棟貸し宿</span>
+                    日靜
+                    <span class="header__logo-en">Nissei</span>
+                </a>
+            </h1>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#about">宿について<br><span>About</span></a></li>
+                    <li class="header__item"><a href="#rooms">お部屋紹介<br><span>rooms</span></a></li>
+                    <li class="header__item"><a href="#experiences">体験・アクティビティ<br><span>experiences</span></a></li>
+                    <li class="header__item"><a href="#rates">料金案内<br><span>rates</span></a></li>
+                    <li class="header__item"><a href="#access">アクセス<br><span>access</span></a></li>
+                    <li class="header__item"><a href="#faq">よくある質問<br><span>faq</span></a></li>
+                    <li class="header__item"><a href="#contact">お問い合わせ<br><span>contact</span></a></li>
+                    <li class="header__item header__item--reserve">
+                        <a href="#reserve">空室確認・ご予約</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- ハンバーガーメニュー (モバイル用) -->
+            <button class="header__menu-btn" aria-label="メニューを開く">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- モバイルナビゲーション (フルスクリーンオーバーレイ) -->
+    <nav class="mobile-nav" id="mobile-nav">
+        <!-- 閉じるボタン -->
+        <button class="mobile-nav__close" aria-label="メニューを閉じる">
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- ロゴ -->
+        <div class="mobile-nav__logo">
+            <span class="mobile-nav__logo-sub">一棟貸し宿</span>
+            <span class="mobile-nav__logo-main">日靜</span>
+            <span class="mobile-nav__logo-line"></span>
+            <span class="mobile-nav__logo-en">Nissei</span>
+        </div>
+
+        <!-- メニューリスト -->
+        <ul class="mobile-nav__list">
+            <li><a href="#">トップページ<span>top</span></a></li>
+            <li><a href="#about">宿について<span>about</span></a></li>
+            <li><a href="#rooms">お部屋紹介<span>rooms</span></a></li>
+            <li><a href="#experiences">体験・アクティビティ<span>experiences</span></a></li>
+            <li><a href="#rates">料金案内<span>rates</span></a></li>
+            <li><a href="#access">アクセス<span>access</span></a></li>
+            <li><a href="#faq">よくある質問<span>faq</span></a></li>
+            <li><a href="#contact">お問い合わせ<span>contact</span></a></li>
+        </ul>
+
+        <!-- 予約ボタン -->
+        <div class="mobile-nav__reserve">
+            <a href="#reserve">客室情報・ご予約</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ヒーローセクション: メインビジュアル -->
+        <section class="hero">
+            <div class="hero__image-wrapper">
+                <img src="./img/hero.png" alt="北海道音調津の美しい海岸線" class="hero__image">
+            </div>
+
+        </section>
+
+        <!-- 宿について (ABOUT) セクション -->
+        <section id="about" class="about">
+            <div class="about__header">
+                <h3 class="section-title">宿について</h3>
+                <p class="section-subtitle-en">About</p>
+            </div>
+            <div class="about__content">
+                <figure class="about__figure about__figure--exterior">
+                    <img src="./img/about_1.png" alt="日靜の外観" class="about__main-image">
+                </figure>
+                <div class="about__text-area">
+                    <p class="about__desc">
+                        "日靜"は<br>北海道広尾町<br>音調津地区にある<br>一棟貸しゲストハウスです
+                    </p>
+                </div>
+                <figure class="about__figure about__figure--interior">
+                    <img src="./img/about_2.png" alt="日靜のリビング" class="about__main-image">
+                </figure>
+            </div>
+        </section>
+
+        <!-- ロケーション/周辺環境セクション (SURROUNDINGS) -->
+        <section class="surroundings">
+            <div class="surroundings__header">
+                <h3 class="surroundings__title">襟裳十勝日高山脈に臨む</h3>
+            </div>
+            <div class="surroundings__content">
+                <figure class="surroundings__figure surroundings__figure--mountain">
+                    <img src="./img/surroundings_1.png" alt="日高山脈の雪景色">
+                </figure>
+                <figure class="surroundings__figure surroundings__figure--sign">
+                    <img src="./img/surroundings_2.png" alt="日高山脈襟裳十勝国立公園の看板">
+                </figure>
+            </div>
+        </section>
+
+        <!-- アクティビティプレビュー -->
+        <section class="activities-preview">
+            <div class="activities-preview__grid">
+                <figure class="activities-preview__item">
+                    <img src="./img/activities_1.png" alt="広尾町の空撮写真">
+                </figure>
+                <figure class="activities-preview__item">
+                    <img src="./img/activities_2.png" alt="サーフィン">
+                </figure>
+                <figure class="activities-preview__item">
+                    <img src="./img/activities_3.png" alt="昆布漁">
+                </figure>
+            </div>
+        </section>
+
+        <!-- 客室セクション (ROOMS) -->
+        <section id="rooms" class="rooms">
+            <div class="rooms__header">
+                <h3 class="section-title">お部屋紹介</h3>
+                <p class="section-subtitle-en">rooms</p>
+            </div>
+            <div class="rooms__inner">
+                <div class="rooms__gallery">
+                    <img src="./img/rooms_1.png" alt="リビングルーム">
+                    <img src="./img/rooms_2.png" alt="和室ベッドルーム">
+                </div>
+            </div>
+        </section>
+
+        <!-- 間取り・宿泊について -->
+        <section class="floor-info">
+            <div class="floor-info__inner">
+                <div class="floor-info__layout">
+                    <div class="floor-info__floor">
+                        <img src="./images/floor_plan.png" alt="1階・2階の間取り図" class="floor-info__image">
+                    </div>
+                </div>
+                <div class="floor-info__details">
+                    <p class="floor-info__desc">築年数を感じさせる趣ある外観と、リノベーションで生まれ変わった心地よい空間。海を望む開放的なリビングと、落ち着いた寝室でおくつろぎください。
+                    </p>
+                    <h4 class="floor-info__title">宿泊について</h4>
+                    <dl class="floor-info__list">
+                        <div class="floor-info__row">
+                            <dt>ーチェックイン</dt>
+                            <dd>15:00〜</dd>
+                        </div>
+                        <div class="floor-info__row">
+                            <dt>ーチェックアウト</dt>
+                            <dd>〜10:00</dd>
+                        </div>
+                        <div class="floor-info__row">
+                            <dt>ー最大利用人数</dt>
+                            <dd>6人</dd>
+                        </div>
+                        <div class="floor-info__row">
+                            <dt>ー駐車場あり</dt>
+                            <dd>（2台）</dd>
+                        </div>
+                        <div class="floor-info__row">
+                            <dt>ー素泊まり・食事なし</dt>
+                            <dd></dd>
+                        </div>
+                        <div class="floor-info__row">
+                            <dt>ー禁煙</dt>
+                            <dd></dd>
+                        </div>
+                        <div class="floor-info__row">
+                            <dt>ーペット利用不可</dt>
+                        </div>
+                        <div class="floor-info__row">
+                            <dt>ー冬季休業</dt>
+                            <dd>（12月〜3月）</dd>
+                        </div>
+                    </dl>
+                    <a href="#" class="btn-outline">ハウスルールについて</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 設備・アメニティセクション -->
+        <section class="amenities">
+            <div class="amenities__inner">
+                <h4 class="amenities__title">設備</h4>
+                <div class="amenities__list">
+                    <div class="amenity-box">キッチン</div>
+                    <div class="amenity-box">お風呂</div>
+                    <div class="amenity-box">簡易水栓トイレ</div>
+                    <div class="amenity-box">洗濯機</div>
+                    <div class="amenity-box">冷蔵庫</div>
+                </div>
+                <div class="amenities__list">
+                    <div class="amenity-box">炊飯器</div>
+                    <div class="amenity-box">電子レンジ</div>
+                    <div class="amenity-box">トースター</div>
+                    <div class="amenity-box">ガスコンロ</div>
+                    <div class="amenity-box">ドライヤー</div>
+                </div>
+                <div class="amenities__list">
+                    <div class="amenity-box">空気清浄機</div>
+                    <div class="amenity-box">Wi-Fi</div>
+                    <div class="amenity-box">駐車場</div>
+                </div>
+
+                <h4 class="amenities__title">アメニティ</h4>
+                <div class="amenities__list">
+                    <div class="amenity-box">布団・シーツ</div>
+                    <div class="amenity-box">バスタオル</div>
+                    <div class="amenity-box">フェイスタオル</div>
+                    <div class="amenity-box">石鹸</div>
+                    <div class="amenity-box">シャンプー</div>
+                </div>
+                <div class="amenities__list">
+                    <div class="amenity-box">コンディショナー</div>
+                    <div class="amenity-box">ボディソープ</div>
+                    <div class="amenity-box">洗濯洗剤</div>
+                    <div class="amenity-box">食器</div>
+                    <div class="amenity-box">調理器具</div>
+                </div>
+                <div class="amenities__list">
+                    <div class="amenity-box">調味料</div>
+                    <div class="amenity-box">BBQコンロ</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 暖炉イメージ -->
+        <section class="fireplace">
+            <div class="fireplace__image">
+                <img src="./images/amenities.png" alt="暖炉のある部屋">
+            </div>
+        </section>
+
+        <!-- 体験・アクティビティ (EXPERIENCES) -->
+        <section id="experiences" class="experiences">
+            <div class="experiences__header">
+                <h3 class="section-title">体験・アクティビティ</h3>
+                <p class="section-subtitle-en">experiences</p>
+            </div>
+
+            <div class="experiences__grid">
+                <div class="experience-card">
+                    <div class="experience-card__text">
+                        <h4>KOBU SAUNAで整う</h4>
+                        <p>
+                            海を眺めながらのサウナ体験。<br>
+                            音調津の自然に包まれながら、<br>
+                            心身ともにリフレッシュできます。
+                        </p>
+                        <a href="#" class="btn-arrow">> 詳しく見る</a>
+                    </div>
+                    <div class="experience-card__image">
+                        <img src="./img/experiences_1.png" alt="KOBU SAUNA">
+                    </div>
+                </div>
+
+                <div class="experience-card experience-card--reverse">
+                    <div class="experience-card__text">
+                        <h4>漁師町の暮らしを知る</h4>
+                        <p>
+                            地元の漁師さんと触れ合い、<br>
+                            昆布漁や漁業の現場を体験。<br>
+                            新鮮な海の幸との出会いを。
+                        </p>
+                        <a href="#" class="btn-arrow">> 詳しく見る</a>
+                    </div>
+                    <div class="experience-card__image">
+                        <img src="./img/experiences_2.png" alt="漁師さんの昆布漁体験">
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="experience-card__text">
+                        <h4>地場産食材満喫BBQ</h4>
+                        <p>
+                            広尾町の新鮮な食材を使った<br>
+                            BBQをお楽しみいただけます。<br>
+                            満天の星空の下で特別な夜を。
+                        </p>
+                        <a href="#" class="btn-arrow">> 詳しく見る</a>
+                    </div>
+                    <div class="experience-card__image">
+                        <img src="./img/experiences_3.png" alt="地場産BBQ">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 料金案内 (RATES) -->
+        <section id="rates" class="rates">
+            <div class="rates__inner">
+                <h3 class="section-title">料金案内</h3>
+                <p class="section-subtitle-en">rates</p>
+
+                <div class="rates__content">
+                    <p class="rates__note">1棟1泊あたり</p>
+                    <div class="rates__price-list">
+                        <div class="rates__price-item">
+                            <span class="rates__guests">2名様：</span>
+                            <span class="rates__amount">14,000円</span>
+                        </div>
+                        <div class="rates__price-item">
+                            <span class="rates__guests">3名様：</span>
+                            <span class="rates__amount">21,000円</span>
+                        </div>
+                        <div class="rates__price-item">
+                            <span class="rates__guests">4名様：</span>
+                            <span class="rates__amount">28,000円</span>
+                        </div>
+                    </div>
+                    <p class="rates__additional">5名以上　1人追加料金5,000円/泊（最大6名）</p>
+                    <div class="rates__notes">
+                        <p>※上記の料金は、平日基本料金であり、宿泊日程や季節によって料金が変動することがあります。</p>
+                        <p>※幼児・お子様は布団やタオル類を使用されない場合無料です。使用される場合は大人一人分でカウントします。</p>
+                        <p>※中学生以上のお客様は大人料金をいただきます。</p>
+                    </div>
+                    <a href="#reserve" class="btn-primary btn-primary--accent">オンライン予約はこちら</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセスセクション -->
+        <section id="access" class="access">
+            <div class="access__inner">
+                <h3 class="section-title">アクセス</h3>
+                <p class="section-subtitle-en">access</p>
+                <div class="access__map">
+                    <!-- Google Mapsの埋め込み (北海道広尾郡広尾町音調津) -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2954.5846941521872!2d143.3163252!3d42.22332009999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f76bc9bcdaebbc7%3A0x7326fa435ff7d577!2z44CSMDg5LTI3NzEg5YyX5rW36YGT5bqD5bC-6YOh5bqD5bC-55S66Z-z6Kq_5rSl77yX77yT77yT!5e0!3m2!1sja!2sjp!4v1769384994904!5m2!1sja!2sjp"
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="access__info">
+                    <div class="access__address">
+                        <h4 class="access__location-name">日靜</h4>
+                        <p>〒089-2627 北海道広尾町音調津733</p>
+                    </div>
+                    <div class="access__directions">
+                        <dl>
+                            <dt>帯広駅から車で</dt>
+                            <dd>90分</dd>
+                            <dt>帯広空港から車で</dt>
+                            <dd>70分</dd>
+                            <dt>忠類大樹ICから車で</dt>
+                            <dd>40分</dd>
+                        </dl>
+                        <p class="access__car-note">※車でのお越しをお勧めしております</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- よくある質問 (FAQ) -->
+        <section id="faq" class="faq">
+            <div class="faq__inner">
+                <h3 class="section-title">よくある質問</h3>
+                <p class="section-subtitle-en">faq</p>
+
+                <div class="faq__list">
+                    <div class="faq__item">
+                        <span class="faq__category">[アクセス・周辺情報について]</span>
+                        <a href="#" class="faq__question">帯広空港からの行き方を教えてください</a>
+                    </div>
+                    <div class="faq__item">
+                        <span class="faq__category">[施設・設備について]</span>
+                        <a href="#" class="faq__question">タオル等アメニティ類について教えてください</a>
+                    </div>
+                    <div class="faq__item">
+                        <span class="faq__category">[ご利用方法について]</span>
+                        <a href="#" class="faq__question">チェックイン・アウト時間・方法を教えてください</a>
+                    </div>
+                    <div class="faq__item">
+                        <span class="faq__category">[料金・お支払方法について]</span>
+                        <a href="#" class="faq__question">キャンセル料金について教えてください</a>
+                    </div>
+                </div>
+                <a href="#" class="btn-outline">他の質問を見る</a>
+            </div>
+        </section>
+
+        <!-- お問い合わせ (CONTACT) -->
+        <section id="contact" class="contact">
+            <div class="contact__inner">
+                <h3 class="section-title">お問い合わせ</h3>
+                <p class="section-subtitle-en">contact</p>
+                <p class="contact__desc">宿泊に関するご質問は、以下公式@LINE よりお問い合わせください。</p>
+                <a href="#" class="btn-primary btn-primary--accent">LINEでのお問い合わせはこちら</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__logo">
+                <span class="footer__logo-sub">一棟貸し宿</span>
+                <h2>日靜</h2>
+                <p class="footer__logo-en">Nissei</p>
+            </div>
+            <nav class="footer__nav">
+                <ul>
+                    <li><a href="#about">宿について<br><span>About</span></a></li>
+                    <li><a href="#rooms">お部屋紹介<br><span>rooms</span></a></li>
+                    <li><a href="#experiences">体験・アクティビティ<br><span>experiences</span></a></li>
+                    <li><a href="#access">周辺の情報<br><span>guide</span></a></li>
+                    <li><a href="#access">アクセス<br><span>access</span></a></li>
+                    <li><a href="#faq">よくある質問<br><span>faq</span></a></li>
+                    <li><a href="#contact">お問い合わせ<br><span>contact</span></a></li>
+                </ul>
+            </nav>
+            <div class="footer__sns">
+                <a href="#" class="sns-icon" aria-label="Facebook">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                    </svg>
+                </a>
+                <a href="#" class="sns-icon" aria-label="X (Twitter)">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                </a>
+                <a href="#" class="sns-icon" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="footer__copyright">Copyright © 2026 guesthouses Nissei. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
