@@ -1434,6 +1434,12 @@ img {
     color: var(--text-light);
 }
 
+.breadcrumb__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .breadcrumb__list {
     display: flex;
     list-style: none;
