@@ -1706,49 +1706,6 @@ img {
 }
 
 /* ==========================================================================
-   Hero Catch Copy
-   ========================================================================== */
-.hero__overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    pointer-events: none;
-}
-
-.hero__catch-copy {
-    color: var(--white);
-    font-family: var(--font-serif);
-    font-size: 3rem;
-    font-weight: 500;
-    letter-spacing: 0.5em;
-    writing-mode: vertical-rl;
-    text-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    animation: fadeInCopy 2s ease-out 0.5s forwards;
-    white-space: nowrap;
-}
-
-@keyframes fadeInCopy {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .hero__catch-copy {
-        font-size: 2rem;
-    }
-}
-
-/* ==========================================================================
    Floating Reservation Button
    ========================================================================== */
 .floating-reserve {
