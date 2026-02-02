@@ -6,11 +6,13 @@
     --text-color: #333333;
     --text-light: #666666;
     --bg-color: #FAFAFA;
-    --accent-color: #5A7D7C;
-    --accent-light: #7A9D9C;
+    --accent-color: #5b7d7c;
+    --accent-light: #739695;
     --white: #ffffff;
     --gray-light: #F5F5F5;
     --gray-border: #E0E0E0;
+    --ruletitle-color: #426B6E;
+
 
     /* フォントの定義 */
     --font-serif: 'Zen Old Mincho', serif;
@@ -439,6 +441,8 @@ img {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        align-items: center;
+        /* Center children horizontally in column mode */
     }
 
     /* Order: Ext Img -> Int Img -> Text */
@@ -499,6 +503,13 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+}
+
+.surroundings__lead {
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+    line-height: 2;
+    color: var(--text-light);
 }
 
 @media (max-width: 768px) {
@@ -575,6 +586,8 @@ img {
 
 .rooms__gallery img {
     width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
     border-radius: 2px;
 }
 
@@ -595,10 +608,61 @@ img {
 }
 
 .floor-info__layout {
-    flex: 1;
+    flex: 1.2;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 0;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.floor-info__item {
+    position: relative;
+    width: 100%;
+}
+
+.floor-info__item--1f {
+    z-index: 2;
+}
+
+.floor-info__item--2f {
+    margin-top: -40px;
+    margin-left: 80px;
+}
+
+.floor-info__label-group {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+}
+
+.floor-info__item--1f .floor-info__label-group {
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+}
+
+.floor-info__item--2f .floor-info__label-group {
+    top: 50%;
+    left: -60px;
+    transform: translateY(-50%);
+}
+
+.floor-info__label-text {
+    font-family: var(--font-serif);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1;
+    text-shadow: 2px 2px 0 var(--white);
+}
+
+.floor-info__label-line {
+    width: 60px;
+    height: 1px;
+    background-color: var(--text-color);
 }
 
 .floor-info__floor {
@@ -607,7 +671,10 @@ img {
 
 .floor-info__image {
     width: 100%;
+    max-width: 400px;
     border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background-color: var(--white);
 }
 
 .floor-info__label {
@@ -661,6 +728,31 @@ img {
     .floor-info__inner {
         flex-direction: column;
     }
+
+    .floor-info__item--2f {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .floor-info__item--1f .floor-info__label-group,
+    .floor-info__item--2f .floor-info__label-group {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        transform: none;
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+
+    .floor-info__label-text {
+        font-size: 2rem;
+    }
+
+    .floor-info__image {
+        max-width: 100%;
+    }
 }
 
 /* ==========================================================================
@@ -695,12 +787,12 @@ img {
 }
 
 .amenity-box {
-    background: var(--gray-light);
-    padding: 12px 24px;
-    font-size: 0.8rem;
+    background: #DFEDEE;
+    padding: 10px 20px;
+    font-size: 0.85rem;
     color: var(--text-color);
     border-radius: 2px;
-    border: 1px solid var(--gray-border);
+    border: 1px solid #DFEDEE;
 }
 
 /* ==========================================================================
@@ -839,6 +931,24 @@ img {
     margin-bottom: 5px;
 }
 
+/* Reservation button specific style */
+.btn-reservation {
+    display: inline-block;
+    background-color: var(--accent-color);
+    padding: 20px 60px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    transition: background-color 0.3s;
+    border-radius: 0;
+    border: none;
+}
+
+.btn-reservation:hover {
+    background-color: var(--accent-light);
+}
+
 /* ==========================================================================
    Access Section
    ========================================================================== */
@@ -963,9 +1073,24 @@ img {
    ========================================================================== */
 .contact {
     padding: 100px 20px;
-    background-color: #E8F0F0;
+    background-color: #DFEDEE;
+    /* Match mockup */
     text-align: center;
-    border-top: 3px solid var(--accent-color);
+}
+
+.btn-line {
+    display: inline-block;
+    background-color: #9BABAB;
+    padding: 20px 40px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s;
+}
+
+.btn-line:hover {
+    background-color: #8A9A9A;
 }
 
 .contact__inner {
@@ -976,6 +1101,56 @@ img {
 .contact__desc {
     font-size: 0.9rem;
     margin-bottom: 40px;
+}
+
+.contact__form {
+    text-align: left;
+}
+
+.contact__form-item {
+    margin-bottom: 25px;
+}
+
+.contact__form-item label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.contact__form-item label span {
+    font-size: 0.7rem;
+    color: #e66b6b;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+.contact__form-item input,
+.contact__form-item textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-border);
+    border-radius: 2px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    background-color: var(--white);
+    transition: border-color 0.3s;
+}
+
+.contact__form-item input:focus,
+.contact__form-item textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.contact__form-submit {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact__form-submit button {
+    cursor: pointer;
+    min-width: 200px;
 }
 
 /* ==========================================================================
@@ -1034,6 +1209,11 @@ img {
 }
 
 .btn-arrow:hover {
+    color: var(--text-color);
+}
+
+.btn-arrow--large {
+    font-size: 0.95rem;
     color: var(--text-color);
 }
 
@@ -1179,5 +1359,287 @@ img {
 
     .surroundings__title::after {
         width: 100px;
+    }
+}
+
+/* ==========================================================================
+   Subpage / Houserule Styles
+   ========================================================================== */
+.subpage .section-padding {
+    padding: 80px 0;
+}
+
+.container--narrow {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.subpage-hero {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    margin-top: 70px;
+    /* Header height */
+}
+
+@media (max-width: 768px) {
+    .subpage-hero {
+        height: 200px;
+    }
+}
+
+.subpage-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.breadcrumb {
+    padding: 20px 0;
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+.breadcrumb__list {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.breadcrumb__list a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+.breadcrumb__list a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb__list li::after {
+    content: ">";
+    margin-left: 10px;
+}
+
+.breadcrumb__list li:last-child::after {
+    content: none;
+}
+
+.houserule__header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.houserule__title {
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .houserule__title {
+        font-size: 1.4rem;
+    }
+}
+
+.rule-item {
+    margin-bottom: 60px;
+}
+
+.rule-item__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--ruletitle-color);
+}
+
+.rule-item__txt-ja {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.rule-item__txt-en {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.serif {
+    font-family: var(--font-serif);
+}
+
+/* ==========================================================================
+   Sauna Page Styles
+   ========================================================================== */
+.sauna-intro__header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sauna-intro__title {
+    font-size: 2.5rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+}
+
+.sauna-intro__subtitle {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    letter-spacing: 0.2em;
+}
+
+.sauna-intro__gallery {
+    margin-bottom: 80px;
+}
+
+.sauna-intro__gallery-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.sauna-intro__img {
+    flex: 1;
+}
+
+.sauna-intro__img img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.sauna-intro__img--2 {
+    margin-top: 80px;
+}
+
+.sauna-intro__vertical-text {
+    writing-mode: vertical-rl;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    letter-spacing: 0.35em;
+    color: var(--text-color);
+    line-height: 1.5;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.sauna-intro__desc {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 2.2;
+    font-size: 1rem;
+}
+
+.sauna-intro__desc p {
+    margin-bottom: 30px;
+}
+
+.sauna-details {
+    margin-top: 80px;
+    padding-top: 80px;
+    border-top: 1px solid var(--gray-border);
+}
+
+.sauna-details__header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.sauna-details__title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+}
+
+.sauna-details__title span {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    display: block;
+    margin-top: 5px;
+}
+
+.sauna-details__content {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.sauna-details__item {
+    margin-bottom: 40px;
+}
+
+.sauna-details__label {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.sauna-details__value {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sauna-details__note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+
+.sauna-precautions {
+    background-color: #DFEDEE;
+    padding: 40px;
+    border-radius: 2px;
+}
+
+.sauna-precautions__title {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sauna-precautions__list {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    line-height: 2;
+    color: var(--text-color);
+}
+
+.sauna-precautions__list li {
+    list-style-type: '・';
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .sauna-intro__title {
+        font-size: 1.8rem;
+    }
+
+    .sauna-intro__gallery-inner {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .sauna-intro__img--2 {
+        margin-top: 0;
+    }
+
+    .sauna-intro__vertical-text {
+        writing-mode: horizontal-tb;
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .sauna-precautions {
+        padding: 30px 20px;
     }
 }
