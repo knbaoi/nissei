@@ -1712,9 +1712,11 @@ img {
     display: none;
     /* デフォルトは非表示(PC) */
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 350px;
     background-color: var(--accent-color);
     color: var(--white);
     text-align: center;
@@ -1724,8 +1726,11 @@ img {
     letter-spacing: 0.1em;
     text-decoration: none;
     z-index: 9999;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    /* 影を少し強調 */
     transition: background-color 0.3s ease;
+    border-radius: 4px;
+    /* ボタンらしく角丸に */
 }
 
 .floating-reserve:hover {
