@@ -13,12 +13,8 @@
     rel="stylesheet">
 
     <!-- ファビコン設定 -->
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
-    <link rel="icon" href="./favicon.ico">
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-    <!-- Android Chrome用 -->
-    <link rel="icon" type="image/png" sizes="192x192" href="./images/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="./images/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" href="./img/favicon_logo.png">
+    <link rel="apple-touch-icon" href="./img/favicon_logo.png">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://nissei-hostel.com/kobusauna.html">
@@ -33,6 +29,50 @@
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@nissei_hostel">
+
+    <!-- 構造化データ (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LodgingBusiness",
+          "name": "KOBU SAUNA (日靜 - NISSEI)",
+          "image": "https://nissei-hostel.com/img/cobusauna_top.png",
+          "@id": "https://nissei-hostel.com/kobusauna.html",
+          "url": "https://nissei-hostel.com/kobusauna.html",
+          "telephone": "",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "音調津733",
+            "addressLocality": "広尾町",
+            "addressRegion": "北海道",
+            "postalCode": "089-2627",
+            "addressCountry": "JP"
+          },
+          "priceRange": "¥3,000〜",
+          "description": "音調津の海と昆布干しの文化から着想を得た小さなサウナ。"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "HOME",
+              "item": "https://nissei-hostel.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "KOBU SAUNA",
+              "item": "https://nissei-hostel.com/kobusauna.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
