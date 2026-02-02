@@ -623,11 +623,17 @@ img {
 
 .floor-info__item--1f {
     z-index: 2;
+    width: 400px;
+    /* 画像幅に合わせる */
+    max-width: 100%;
 }
 
 .floor-info__item--2f {
     margin-top: -40px;
     margin-left: 80px;
+    width: 400px;
+    /* 画像幅に合わせる */
+    max-width: 100%;
 }
 
 .floor-info__label-group {
@@ -641,18 +647,20 @@ img {
 
 .floor-info__item--1f .floor-info__label-group {
     top: 50%;
-    right: -40px;
+    right: auto;
+    left: 100%;
+    margin-left: 20px;
     transform: translateY(-50%);
-    align-items: flex-end;
-    /* 1Fは右側なので右揃え */
+    align-items: flex-start;
 }
 
 .floor-info__item--2f .floor-info__label-group {
     top: 50%;
-    left: -40px;
+    left: auto;
+    right: 100%;
+    margin-right: 20px;
     transform: translateY(-50%);
-    align-items: flex-start;
-    /* 2Fは左側なので左揃え */
+    align-items: flex-end;
 }
 
 .floor-info__label-text {
@@ -737,6 +745,13 @@ img {
     .floor-info__item--2f {
         margin-top: 40px;
         margin-left: 0;
+        width: 100%;
+        /* スマホでは幅制限を解除 */
+    }
+
+    .floor-info__item--1f {
+        width: 100%;
+        /* スマホでは幅制限を解除 */
     }
 
     .floor-info__item--1f .floor-info__label-group,
