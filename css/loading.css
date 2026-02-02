@@ -1,0 +1,96 @@
+/* ローディング画面のスタイル */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f9f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-logo {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.loading-logo-sub {
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 10px;
+    font-family: var(--font-sans);
+}
+
+.loading-logo-main {
+    display: block;
+    font-size: 3rem;
+    letter-spacing: 0.2em;
+}
+
+.loading-logo-en {
+    display: block;
+    font-size: 1rem;
+    letter-spacing: 0.5em;
+    margin-top: 10px;
+    color: var(--text-light);
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(91, 125, 124, 0.1);
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* フォーム送信メッセージのスタイル */
+.form-message {
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.form-message--success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+.form-message--success p {
+    margin: 0;
+    line-height: 1.8;
+}

@@ -69,11 +69,22 @@
     <!-- スタイルシートの読み込み (リセットCSSとスタイルCSS) -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/loading.css">
     <!-- JavaScriptの読み込み (defer属性でHTML読み込み後に実行) -->
     <script src="./main.js" defer></script>
 </head>
 
 <body>
+
+    <!-- ローディング画面 -->
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-logo">
+            <span class="loading-logo-sub">一棟貸し宿</span>
+            <span class="loading-logo-main">日靜</span>
+            <span class="loading-logo-en">Nissei</span>
+        </div>
+        <div class="loading-spinner"></div>
+    </div>
 
     <!-- ヘッダーエリア -->
     <header class="header">
@@ -451,7 +462,13 @@
                 <h2 class="section-title">お問い合わせ</h2>
                 <p class="section-subtitle-en">contact</p>
                 <p class="contact__desc">宿泊に関するご質問は、以下のフォームよりお問い合わせください。</p>
-                <form class="contact__form">
+
+                <!-- 送信完了メッセージ -->
+                <div id="form-success" class="form-message form-message--success" style="display: none;">
+                    <p>✓ お問い合わせありがとうございます。<br>内容を確認次第、ご連絡いたします。</p>
+                </div>
+
+                <form class="contact__form" action="https://formspree.io/f/xwvqwvpv" method="POST" id="contact-form">
                     <div class="contact__form-item">
                         <label for="name">お名前<span>必須</span></label>
                         <input type="text" id="name" name="name" required placeholder="例：山田 太郎">

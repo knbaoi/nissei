@@ -4,6 +4,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     console.log('日靜 - ページが読み込まれました');
 
+    // ローディング画面を非表示
+    hideLoadingScreen();
+
     // スムーズスクロールの設定
     setupSmoothScroll();
 
@@ -15,7 +18,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // モバイルメニューの設定
     setupMobileMenu();
+
+    // お問い合わせフォームの設定
+    setupContactForm();
 });
+
+// ========================================
+// ローディング画面の非表示
+// ========================================
+function hideLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    if (loadingScreen) {
+        // 少し遅延させてから非表示にする（最低表示時間を確保）
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+            // アニメーション完了後に要素を削除
+            setTimeout(() => {
+                loadingScreen.remove();
+            }, 500);
+        }, 800);
+    }
+}
+
+// ========================================
+// お問い合わせフォームの処理
+// ========================================
+function setupContactForm() {
+    const form = document.getElementById('contact-form');
+    const successMessage = document.getElementById('form-success');
+
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            // Formspreeに送信されるので、デフォルトの動作は維持
+            // 送信後にメッセージを表示するため、少し遅延させる
+            setTimeout(() => {
+                if (successMessage) {
+                    successMessage.style.display = 'block';
+                    form.style.display = 'none';
+                    // ページトップにスクロール
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            }, 1000);
+        });
+    }
+}
 
 // ========================================
 // スムーズスクロール
