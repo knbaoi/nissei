@@ -17,6 +17,28 @@
         href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Old+Mincho:wght@400;500;700;900&display=swap"
         rel="stylesheet">
 
+    <!-- ファビコン設定 -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png">
+    <!-- Android Chrome用 -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./images/android-chrome-512x512.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://nissei-hostel.com/">
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="日靜 - NISSEI | 北海道広尾町音調津の一棟貸しゲストハウス">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nissei-hostel.com/">
+    <meta property="og:image" content="https://nissei-hostel.com/img/hero.png">
+    <meta property="og:site_name" content="日靜 - NISSEI">
+    <meta property="og:description" content="北海道広尾町音調津にある一棟貸しゲストハウス「日靜」。襟裳十勝日高山脈の絶景、サウナ、BBQなど心地よい滞在をお楽しみください。">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@nissei_hostel">
+
     <!-- スタイルシートの読み込み (リセットCSSとスタイルCSS) -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -103,7 +125,7 @@
         <!-- 宿について (ABOUT) セクション -->
         <section id="about" class="about">
             <div class="about__header">
-                <h3 class="section-title">宿について</h3>
+                <h2 class="section-title">宿について</h2>
                 <p class="section-subtitle-en">About</p>
             </div>
             <div class="about__content">
@@ -124,7 +146,7 @@
         <!-- ロケーション/周辺環境セクション (SURROUNDINGS) -->
         <section class="surroundings">
             <div class="surroundings__header">
-                <h3 class="surroundings__title">襟裳十勝日高山脈に臨む</h3>
+                <h2 class="surroundings__title">襟裳十勝日高山脈に臨む</h2>
                 <div class="surroundings__lead">
                     <p>暮らすように泊まる、1日1組の一棟貸し宿</p>
                     <p>日常を静かに過ごしてほしいという思いを込めています</p>
@@ -159,7 +181,7 @@
         <!-- 客室セクション (ROOMS) -->
         <section id="rooms" class="rooms">
             <div class="rooms__header">
-                <h3 class="section-title">お部屋紹介</h3>
+                <h2 class="section-title">お部屋紹介</h2>
                 <p class="section-subtitle-en">rooms</p>
             </div>
             <div class="rooms__inner">
@@ -283,7 +305,7 @@
         <!-- 体験・アクティビティ (EXPERIENCES) -->
         <section id="experiences" class="experiences">
             <div class="experiences__header">
-                <h3 class="section-title">体験・アクティビティ</h3>
+                <h2 class="section-title">体験・アクティビティ</h2>
                 <p class="section-subtitle-en">experiences</p>
             </div>
 
@@ -338,7 +360,7 @@
         <!-- 料金案内 (RATES) -->
         <section id="rates" class="rates">
             <div class="rates__inner">
-                <h3 class="section-title">料金案内</h3>
+                <h2 class="section-title">料金案内</h2>
                 <p class="section-subtitle-en">rates</p>
 
                 <div class="rates__content">
@@ -364,7 +386,7 @@
         <!-- アクセスセクション -->
         <section id="access" class="access">
             <div class="access__inner">
-                <h3 class="section-title">アクセス</h3>
+                <h2 class="section-title">アクセス</h2>
                 <p class="section-subtitle-en">access</p>
                 <div class="access__map">
                     <!-- Google Mapsの埋め込み (北海道広尾郡広尾町音調津) -->
@@ -398,7 +420,7 @@
         <!-- お問い合わせ (CONTACT) -->
         <section id="contact" class="contact">
             <div class="contact__inner">
-                <h3 class="section-title">お問い合わせ</h3>
+                <h2 class="section-title">お問い合わせ</h2>
                 <p class="section-subtitle-en">contact</p>
                 <p class="contact__desc">宿泊に関するご質問は、以下のフォームよりお問い合わせください。</p>
                 <form class="contact__form">
@@ -416,7 +438,7 @@
                             placeholder="お問い合わせ内容をご記入ください"></textarea>
                     </div>
                     <div class="contact__form-submit">
-                        <button type="submit" class="btn-reservation">送信する</button>
+                        <button type="submit" class="btn-reservation">送信</button>
                     </div>
                 </form>
             </div>
