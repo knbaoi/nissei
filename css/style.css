@@ -808,11 +808,17 @@ img {
 
 .amenity-box {
     background: #DFEDEE;
-    padding: 10px 20px;
+    padding: 10px 5px;
+    width: 160px;
+    text-align: center;
     font-size: 0.85rem;
     color: var(--text-color);
     border-radius: 2px;
     border: 1px solid #DFEDEE;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ==========================================================================
