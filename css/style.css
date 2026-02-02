@@ -633,21 +633,26 @@ img {
 .floor-info__label-group {
     position: absolute;
     display: flex;
-    align-items: center;
-    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
     z-index: 3;
 }
 
 .floor-info__item--1f .floor-info__label-group {
     top: 50%;
-    right: -20px;
+    right: -40px;
     transform: translateY(-50%);
+    align-items: flex-end;
+    /* 1Fは右側なので右揃え */
 }
 
 .floor-info__item--2f .floor-info__label-group {
     top: 50%;
-    left: -60px;
+    left: -40px;
     transform: translateY(-50%);
+    align-items: flex-start;
+    /* 2Fは左側なので左揃え */
 }
 
 .floor-info__label-text {
@@ -660,8 +665,8 @@ img {
 }
 
 .floor-info__label-line {
-    width: 60px;
-    height: 1px;
+    width: 100%;
+    height: 2px;
     background-color: var(--text-color);
 }
 
